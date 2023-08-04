@@ -49,15 +49,15 @@ app.patch("/v1/note/:id", (req, res) => {
   let note = notes.find((note) => note.id === id);
 
   if (title) {
-    note.title === title;
+    note.title = title;
   }
 
   if (content) {
-    note.content === content;
+    note.content = content;
   }
 
   if (isDraft) {
-    note.isDraft === isDraft;
+    note.isDraft = isDraft;
   }
 
   res.send(`Updated ${id} with ease.`);
