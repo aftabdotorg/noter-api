@@ -1,4 +1,5 @@
 import express from "express";
+import validator from "express-validator";
 import {
   createNotes,
   getNotes,
@@ -7,11 +8,17 @@ import {
   updateNote,
 } from "../../controllers/v1/notes.js";
 
+const { body } = validator;
 const router = express.Router();
 
 router.get("/", getNotes);
 
-router.post("/", createNotes);
+router.post(
+  "/",
+  body("title").exists(),
+  body("isDraft").isBoolean(),
+  createNotes
+);
 
 router.get("/:id", getNoteById);
 
