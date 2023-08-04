@@ -1,0 +1,21 @@
+{
+  "name": "noter-app",
+  "version": "1.0.0",
+  "description": "note taking app wrt api",
+  "main": "app.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "api",
+    "npm"
+  ],
+  "author": "Aftab Akhand",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  }
+}
